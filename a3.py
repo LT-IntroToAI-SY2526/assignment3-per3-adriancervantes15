@@ -133,7 +133,7 @@ def director_by_title(matches: List[str]) -> List[str]:
     """
     title = matches[0]
     result = []
-    for movie in movies_db:
+    for movie in movie_db:
         if get_title(movie) == title:
             result.append(get_director(movie))
     return result
@@ -153,7 +153,7 @@ def title_by_director(matches: List[str]) -> List[str]:
     for movie in movie_db:
         if get_director(movie) == director:
             result.append(get_title(movie))
-    result result
+    return result
 
 
 def actors_by_title(matches: List[str]) -> List[str]:
@@ -167,8 +167,8 @@ def actors_by_title(matches: List[str]) -> List[str]:
     """
     title = matches[0]
     result = []
-    for movie in movies_db:
-        if get_title(movies) == title:
+    for movie in movie_db:
+        if get_title(movie) == title:
             result = get_actors(movie)
     return result 
 
